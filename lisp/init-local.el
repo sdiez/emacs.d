@@ -1,5 +1,3 @@
-(require 'use-package)
-
 ;; Custom key bindings
 (setq mac-option-key-is-meta nil)
 (setq mac-command-key-is-meta t)
@@ -14,6 +12,9 @@
 ;; Vue
 ;; We are going to use web-mode
 ;; TODO: Explore lsp
+(unless (package-installed-p 'web-mode)
+  (package-refresh-contents)
+  (package-install 'web-mode))
 
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
