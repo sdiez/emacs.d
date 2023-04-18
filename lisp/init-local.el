@@ -9,6 +9,9 @@
 (if window-system
     (setq default-directory "~/"))
 
+;; Font size
+(set-face-attribute 'default nil :height 90)
+
 ;; Vue
 ;; We are going to use web-mode
 ;; TODO: Explore lsp
