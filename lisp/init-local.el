@@ -9,9 +9,6 @@
 (if window-system
     (setq default-directory "~/"))
 
-;; Font size
-(set-face-attribute 'default nil :height 90)
-
 ;; Vue
 ;; We are going to use web-mode
 ;; TODO: Explore lsp
@@ -19,7 +16,6 @@
   (package-refresh-contents)
   (package-install 'web-mode))
 
-(require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
